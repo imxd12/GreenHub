@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - GreenHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="community.html" class="back-to-home"><i class="fas fa-arrow-left"></i></a>
+        <div class="header-content">
+            <h1 class="logo">GreenHub</h1>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="eco-tips.html">Eco-Tips</a></li>
+                <li><a href="renewable-energy.html">Renewable Energy</a></li>
+                <li><a href="sustainable-products.html">Sustainable Products</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="forum">
+            <h2>Community Forum</h2>
+            <div class="forum-posts">
+                <article class="post">
+                    <h3>How to Start a Zero-Waste Lifestyle</h3>
+                    <p><strong>Posted by:</strong> Jane Doe</p>
+                    <p>I'm looking for tips on how to start living a zero-waste lifestyle. What are some easy changes I can make at home? Any advice would be appreciated!</p>
+                    <a href="#reply" class="btn">Reply</a>
+                </article>
+                <article class="post">
+                    <h3>Best Solar Panels for Home Use</h3>
+                    <p><strong>Posted by:</strong> John Smith</p>
+                    <p>I'm interested in installing solar panels at home. What are the best options available in terms of efficiency and cost?</p>
+                    <a href="#reply" class="btn">Reply</a>
+                </article>
+                <!-- Add more posts as needed -->
+            </div>
+
+            <section class="new-post">
+                <h2>Start a New Discussion</h2>
+                <form action="submit-post.php" method="post">
+                    <label for="post-title">Title:</label>
+                    <input type="text" id="post-title" name="post-title" required>
+                    
+                    <label for="post-content">Content:</label>
+                    <textarea id="post-content" name="post-content" rows="6" required></textarea>
+                    
+                    <button type="submit" class="btn">Submit Post</button>
+                </form>
+            </section>
+        </section>
+    </main>
+
+ <!-- Go to Top Button -->
+<a href="#" class="go-to-top" id="go-to-top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+    <footer>
+        <p>&copy; 2024 GreenHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<style>
+.back-to-home {
+    position: absolute; /* Absolute positioning within the header */
+    top: 10px;
+    left: 10px;
+    background-color: #4CAF50; /* Solid background color */
+    color: white; /* White color for the icon */
+    padding: 6px; /* Smaller padding */
+    border: 2px solid white; /* White border to define the button */
+    border-radius: 50%;
+    font-size: 1.2em; /* Smaller font size */
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(207, 14, 14, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    z-index: 1000;
+}
+
+.back-to-home i {
+    vertical-align: middle;
+}
+
+.back-to-home:hover {
+    background-color: #4CAF50; /* Change background color on hover */
+    color: white; /* Maintain white color for the icon */
+    border-color: #4CAF50; /* Change border color on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Enhanced shadow effect */
+}
+
+.back-to-home:active {
+    transform: scale(1.05); /* Slightly smaller scale when clicked */
+}
+
+/* Ensure header has relative positioning */
+header {
+    position: relative;
+    padding: 20px;
+    background-color: #4CAF50;/* Ensure header background is solid */
+    color: white;
+}
+</style>

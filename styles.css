@@ -1,0 +1,470 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    position: relative;
+    padding: 15px;
+    background: #4CAF50; /* Background color */
+    color: #fff; /* Text color */
+    transition: background-color 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #969494;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 24px;
+    justify-content: space-between;
+    cursor: pointer;
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4CAF50;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    nav ul.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+.hero {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #4CAF50;
+    background-color: #ffffff; /* Button background color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.featured-articles {
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+.featured-articles h3 {
+    text-align: center;
+}
+
+.featured-articles article {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.featured-articles article h4 {
+    margin: 0;
+}
+
+.featured-articles .btn {
+    display: inline-block;
+    margin-top: 0.5em;
+}
+
+.highlight {
+    padding: 2em;
+    background-color: #e0f7fa;
+}
+
+.highlight h3 {
+    text-align: center;
+}
+
+.highlight ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.highlight li {
+    margin: 0.5em 0;
+}
+
+.call-to-action {
+    padding: 2em;
+    text-align: center;
+}
+
+.call-to-action .btn {
+    margin-top: 1em;
+}
+
+/* Sustainable Products Page Styles */
+.sustainable-products-intro {
+    text-align: center;
+    padding: 10px;
+}
+
+.sustainable-products-intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.sustainable-products-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.sustainable-products-content {
+    padding: 20px;
+}
+
+.product-category {
+    margin-bottom: 40px;
+}
+
+.product-category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-category p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.product-category ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.product-category li {
+    margin-bottom: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Community Page Styles */
+.community-intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.community-intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.community-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.forum-section, .local-events, .get-involved {
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.forum-section h3, .local-events h3, .get-involved h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.forum-section p, .local-events p, .get-involved p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+.btn-visit-forum {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-visit-forum:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resources-intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.resources-intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.resources-intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+section {
+    padding: 20px;
+    border-top: 2px solid #ddd;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+ul li a {
+    color: #00a859;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Go to Top Button Styles */
+.go-to-top {
+    position: fixed;
+    bottom: 27px; /* Distance from the bottom of the viewport */
+    left: 90%;
+    transform: translateZ(-10%); /* Center horizontally */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensure it is not interactive when hidden */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.go-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-to-top:hover {
+    background-color: #008c5f;
+    transform: scale(1.1);
+}
+
+.go-to-top i {
+    margin: 0;
+    font-size: 24px; /* Adjust size if needed */
+}
